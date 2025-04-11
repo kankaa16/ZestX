@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Specials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(to right, #ffe0e0, #fff5e1);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+
+        #monthly-specials {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #monthly-specials h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e44d26; /* Example Accent Color */
+        }
+
+        .specials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .item {
+            border: 2px solid #000000;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .item img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .item h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #27ae60; /* Example Price Color */
+            margin-top: 10px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .specials-grid {
+                grid-template-columns: 1fr; /* Stack on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="monthly-specials">
+            <h2>This Month's Specials</h2>
+            <div class="specials-grid">
+
+                <div class="item">
+                    <img src="pasta.jpg" alt="Pink Sauce pasta">
+                    <h3> 1</h3>
+                    <p>Flavorful dish made by blending the richness of white sauce with the tangy brightness of red tomato sauce. <br>It's the perfect fusion of two classic sauces!</p>
+                    <p class="price">450 Rs</p>
+                </div>
+
+                <div class="item">
+                    <img src="pizzo.jpg" alt="">
+                    <h3>Farmhouse Feast</h3>
+                    <p>Farmhouse Pizza is a delightful vegetarian pizza topped with a mix of fresh veggies like capsicum, onions, tomatoes, sweet corn, and mushrooms, all layered with rich mozzarella cheese.</p>
+                    <p class="price">575 Rs</p>
+                </div>
+
+                <div class="item">
+                    <img src="burger.jpg" alt="Special Dish 3">
+                    <h3>Cheesy Crunch Melt</h3>
+                    <p>A crispy veggie patty loaded with molten cheese, fresh lettuce, jalapeños, and chipotle mayo, sandwiched in a toasted sesame bun.</p>
+                    <p class="price">249 Rs</p>
+                </div>
+
+                <div class="item">
+                    <img src="pulav.jpg" alt="Special Dish 4">
+                    <h3>Royal Pulao</h3>
+                    <p>A fragrant basmati rice dish cooked with colorful vegetables, whole spices, saffron, and dry fruits—rich and mildly spiced for a royal touch.</p>
+                    <p class="price">550 Rs</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

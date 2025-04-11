@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="menu.css">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <button class="tab" id="back" onclick="window.location.href='zomato.html';">
+      <i class="fa-solid fa-arrow-left fa-lg" style="color: #000000;"></i>
+      <h3>Back</h3>
+    </button>
+    
+    <div id="logo">
+      <h1>ZestX</h1>
+    </div>
+
+    <div id="search-box">
+      <div id="s"><input placeholder="Search for any dishes" id="search-here" oninput="filterMenu()">
+      <div id="search-icon">
+        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></div> 
+      </div>
+      <div id="dropdownMenu" class="dropdown-menu">
+        <div class="menu-item">Pizza</div>
+        <div class="menu-item">Burger</div>
+        <div class="menu-item">Pasta</div>
+        <div class="menu-item">Salad</div>
+        <div class="menu-item">Sushi</div>
+        <div class="menu-item">Sandwich</div>
+        <div class="menu-item">Fries</div>
+        <div class="menu-item">Indian</div>
+        <div class="menu-item">Italian</div>
+        <div class="menu-item">Chinese</div>
+        <div class="menu-item">Mexican</div>
+        <div class="menu-item">Sweets</div>
+        <div class="menu-item">Coolers</div>
+        <div class="menu-item">Refreshments</div>
+        <div class="menu-item">Beverages</div>
+        <div class="menu-item">Desserts</div>
+        <div class="menu-item">Frankies</div>
+      </div>
+    </div>
+
+    <button class="tab" id="cart">
+      <i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i>
+      <h3>My Cart</h3>
+    </button>
+
+    <button class="tab" id="logout" onclick="window.location.href='login.html';">
+      <div id="log"><i class="fa-solid fa-power-off fa-lg" style="color: #000000;"></i></div>
+      <h3>Logout</h3>
+    </button>
+  </header>
+
+
+  <main style="background-color: rgb(245, 244, 243);">
+    <div id="fakeheader"></div>
+
+    <div id="WOYM">
+      <h1>WHAT'S ON YOUR MIND TODAY?</h1>
+    </div>
+    <hr>
+    <div id="deals">
+      <h1 style="font-weight: lighter; text-align: center;"><b>Deals for You</b></h1>
+      <div id="offers">
+        <div class="offer">
+          <i class="fa-solid fa-tags fa-xl"></i>
+          <h2 style="font-weight: lighter;">&nbsp;Upto <b>50% OFF</b> on select items</h2>
+        </div>
+        <div class="offer">
+          <i class="fa-solid fa-gift fa-xl"></i>
+          <h2 style="font-weight: lighter;">&nbsp;<b>BOGO</b> Friday offer</h2>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div id="menu-circles">
+      <div class="circle" id="pizza" data-tag="pizza">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*ZqrtA7Ab65WRZnbq" alt="Pizza">
+        <h3>PIZZA</h3>
+      </div>
+      <div class="circle" id="burger" data-tag="burger">
+        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Burger">
+        <h3>BURGER</h3>
+      </div>
+      <div class="circle" id="sandwich" data-tag="sandwich">
+        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHxwaG90by1wYWdlfHx8fA%3D%3D" alt="Sandwich">
+        <h3>SANDWICH</h3>
+      </div>
+      <div class="circle" id="cake" data-tag="cake">
+        <img src="https://images.unsplash.com/photo-1602351447937-745cb720612f?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D" alt="Cake">
+        <h3>CAKE</h3>
+      </div>
+      <div class="circle" id="soup" data-tag="soup">
+        <img src="https://images.unsplash.com/photo-1578861256505-d3be7cb037d3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D" alt="Soup">
+        <h3>SOUP</h3>
+      </div>
+      <div class="circle" id="punjabi" data-tag="punjabi">
+        <img src="https://images.unsplash.com/photo-1588644525273-f37b60d78512?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D" alt="Punjabi">
+        <h3>PUNJABI</h3>
+      </div>
+      <div class="circle" id="desserts" data-tag="desserts">
+        <img src="https://images.unsplash.com/photo-1656517092618-0902a2f8b5ac?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D" alt="Desserts">
+        <h3>DESSERT</h3>
+      </div>
+      <div class="circle" id="pasta" data-tag="pasta">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D" alt="Pasta">
+        <h3>PASTA</h3>
+      </div>
+    </div>
+    <div id="menu-head"><h1>MENU</h1></div>
+    <div id="menu"></div>
+    <div id="cart-tab" style="display: none; padding: 3px;">
+      <h1 style="text-align: center;">Your Cart</h1>
+      <hr>
+      <div id="head-row">
+        <h3 style="font-size: larger;">Item</h3>
+        <h3 style="font-size: larger;">Price</h3>
+      </div>
+      <hr>
+      <div id="cart-items"></div>
+      <h2 id="total-price" style="margin: 4px;">Total: Rs.0</h2>
+      <button id="checkout">CHECKOUT</button>
+    </div>
+  </main>
+  <script src="filter.js"></script>
+</body>
+</html>
+
+
+

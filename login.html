@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+<script type="text/javascript" src="validation.js" defer></script>
+
+</head>
+
+<body>
+    <div class="left-panel">
+      <div class="content">
+        <h1>ZestX</h1>
+        <p>Order the best food in your city</p>
+      </div>
+    </div>
+  
+    <div class="wrapper" >
+      <form action="login.php" method="post" id="form">
+        <h4>Login</h4>
+        <p id="error-message" style="color: red;"></p>
+        <input required type="email" name="email" placeholder="Email">
+        <input required type="password" name="password" placeholder="Password">
+        
+        <button type="submit">Login</button>
+        
+
+        <p>New here? <a href="signup.html">Create account</a></p>
+      </form>
+    </div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('error')) {
+        document.getElementById('error-message').textContent = 'Invalid email or password.';
+      }
+    </script>
+    
+  </body>
+  </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="login.css" />
+  <script defer src="validation.js"></script>
+</head>
+<body>
+  <div class="left-panel">
+    <div class="content">
+      <h1>ZestX</h1>
+      <p>Order the best food in your city</p>
+    </div>
+  </div>
+
+  <div class="wrapper" id="signupBox">
+    <form action="connect.php" method="post" id="form">
+      <h4>Signup</h4>
+      <input required type="text" name="firstname" id="firstname-input" placeholder="Full name" />
+      <input required type="email" name="email" id="email-input" placeholder="Email" />
+      <input required type="password" name="password" id="password-input" placeholder="Password" />
+      <input required type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat password" />
+      <div id="error-message" style="color: red; margin-bottom: 10px;"></div>
+      <button type="submit">Signup</button>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+</body>
+</html>

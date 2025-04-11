@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Item</title>
+  <link rel="stylesheet" href="AddNew.css">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header>
+    <button class="tab" id="back" onclick="window.location.href='zomato.html';">
+      <i class="fa-solid fa-arrow-left fa-lg" style="color: #000000;"></i>
+      <h3>Back</h3>
+    </button>
+
+    <div id="logo">
+      <h1>ZestX</h1>
+    </div>
+
+    <div id="search-box">
+      <div id="s"><input placeholder="Search for any dishes" id="search-here" oninput="filterMenu()">
+      <div id="search-icon">
+        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;"></i></div> 
+      </div>
+      <div id="dropdownMenu" class="dropdown-menu">
+        <div class="menu-item">Pizza</div>
+        <div class="menu-item">Burger</div>
+        <div class="menu-item">Pasta</div>
+        <div class="menu-item">Salad</div>
+        <div class="menu-item">Sushi</div>
+        <div class="menu-item">Sandwich</div>
+        <div class="menu-item">Fries</div>
+        <div class="menu-item">Indian</div>
+        <div class="menu-item">Italian</div>
+        <div class="menu-item">Chinese</div>
+        <div class="menu-item">Mexican</div>
+        <div class="menu-item">Sweets</div>
+        <div class="menu-item">Coolers</div>
+        <div class="menu-item">Refreshments</div>
+        <div class="menu-item">Beverages</div>
+        <div class="menu-item">Desserts</div>
+        <div class="menu-item">Frankies</div>
+      </div>
+    </div>
+
+    <button class="tab" id="cart">
+      <i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i>
+      <h3>My Cart</h3>
+    </button>
+
+    <button class="tab" id="logout">
+      <i class="fa-solid fa-power-off fa-lg" style="color: #000000;"></i>
+      <h3>Logout</h3>
+    </button>
+  </header>
+
+  <main>
+    <div id="fakeheader"></div>
+    <div id="page">
+      <div class="form-container">
+        <h1>ADD NEW ITEM</h1>
+        <form id="add-item-form" action="add.php" method="post">
+          <div class="form-group">
+            <label for="item-name">Item Name</label>
+            <input type="text" id="item-name" name="name" placeholder="Enter item name" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="item-description">Description</label>
+            <textarea id="item-description" name="description" rows="3" placeholder="Enter item description" required></textarea>
+          </div>
+      
+          <div class="form-group">
+            <label for="item-image">Image URL</label>
+            <input type="url" id="item-image" name="image" placeholder="Enter image URL" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="item-price">Price (Rs)</label>
+            <input type="number" id="item-price" name="price" placeholder="Enter price" step=".01" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="item-tag">Tag</label>
+            <select id="item-tag" name="tag">
+              <option value="">Select a tag</option>
+              <option value="pizza">Pizza</option>
+              <option value="burger">Burger</option>
+              <option value="sandwich">Sandwich</option>
+              <option value="cake">Cake</option>
+              <option value="soup">Soup</option>
+              <option value="punjabi">Punjabi</option>
+              <option value="desserts">Desserts</option>
+              <option value="pasta">Pasta</option>
+            </select>
+          </div>
+      
+          <div class="button-group">
+            <button type="submit" class="submit-btn"><b>Submit</b></button>
+            <button type="reset" class="clear-btn"><b>Clear</b></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script>
+  document.getElementById("logout").addEventListener("click",function(){
+    window.location.href="login.html";
+    })
+    </script>
+</body>
+</html>

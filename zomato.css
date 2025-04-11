@@ -1,0 +1,785 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+
+
+header{
+    height: 550px;
+    width: 100%;
+    background-image: url("top-view-fast-food-mix-mozzarella-sticks-club-sandwich-hamburger-mushroom-pizza-caesar-shrimp-salad-french-fries-ketchup-mayo-cheese-sauces-table.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+    header::before{
+        position: absolute;
+        content: "";
+        height: 550px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.4);
+        z-index: 0;
+    }
+
+.nav{
+    width: 100%;
+    align-items: first baseline;
+    display: flex;
+    justify-content:end;
+    background: rgba(0,0,0,0.5);
+}
+
+
+#applogo {
+    padding-left: 10px;
+    padding-bottom: 8px;
+    margin-top: 15px;
+    z-index: 2;
+}
+
+#cartlogo{
+    padding-left: 10px;
+    padding-bottom: 8px;
+    margin-top: 15px;
+    z-index: 2;
+}
+
+#userlogo{
+    padding-left: 10px;
+    padding-bottom: 8px;
+    margin-top: 15px;
+    z-index: 2;
+}
+
+
+.nav #app {
+   
+    margin-top: 20px;
+    /* width: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* position: relative; */
+    color: white;
+    font-size: 20px;   
+}
+
+
+
+.nav #cart{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+    margin-right: 50px;
+}
+
+.zomato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 550px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 1;
+    font-size: 30px;
+}
+
+.zomato h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120px;
+}
+
+#search-box {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px; 
+  width: 360px;
+  border-radius: 60px;
+  margin-top: 10px;
+}
+
+#search-box #s {
+  margin-top: 20px;
+  width: 360px;
+  height: 60px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#search-box #s input {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: 300px; 
+  height: 60px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  border-radius: 60px;
+  padding-left: 50px;
+}
+
+#search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  z-index: 3;
+  margin-left: -40px; 
+}
+
+.dropdown-menu {
+position: absolute; 
+top: 65px; 
+left: 0; 
+width: 360px; 
+background: linear-gradient(to right, #ffe0e0, #fff5e1);
+border: 1px solid #000000;
+border-radius: 5px;
+box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+max-height: 200px;
+font-size: medium;
+overflow-y: auto;
+color: #000000;
+display: none;
+z-index: 1;
+}
+
+.menu-item {
+border: 1px solid black;
+padding: 10px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.menu-item:hover {
+background-color: #f0f0f0;
+}
+
+
+a{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: aliceblue;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+a:hover{
+    text-shadow: 2px 2px 5px rgb(2, 255, 255);
+    background:rgba(0,0,0,0.4);
+    transform: scale(1.05);
+}
+
+#delivery {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: linear-gradient(to right, #ffe0e0, #fff5e1);
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  
+  #left {
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+    color: #000000;
+  }
+  
+  #left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  #left p {
+    font-size: 1.2rem;
+  }
+  
+  #right {
+    flex: 1;
+    position: relative;
+    height: 100%;
+  }
+  
+  #delivery:hover {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)),
+      url("pizzadodl.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+  }
+  #left:hover{
+    color: white;
+  }
+  
+#bg{
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(to left,rgba(87, 86, 86, 0.6),rgba(255, 251, 251, 0.3))
+}
+
+#online,#dine,#clubs{
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    margin-left:50px ;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.7s ease-in-out;
+}
+
+#online{
+    height: 250px;
+    width:350px;
+    background-image: url("blue-cake.jpg") ;
+    background-size: cover;
+}
+
+#dine{
+    height: 250px;
+    width: 350px;
+    background-image: url("dining.jpg");
+    background-size: cover;
+}
+
+#clubs{
+    height: 250px;
+    width: 350px;
+    background-image: url("table.avif");
+    background-size: cover;
+}
+
+
+#online::before,#dine::before,#clubs::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#online h1,p,#dine h1,p,#clubs h1,p{
+    z-index: 1;
+}
+
+#online:hover,#dine:hover,#clubs:hover{
+    transform: scale(1.05);
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+#collection{
+    position: relative;
+    font-style: inherit;
+    height: auto;
+    width: 100%;
+    padding: 10px 0 0 50px;
+    display: flex;
+    background-color:white;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#collection h1{
+    font-weight: 1000;
+    font-style: oblique;
+}
+#collection p{
+    margin-bottom:50px;
+    font-style: oblique;
+}
+
+#places{
+    height: 500px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1px;
+    padding: 20px;
+    justify-content:space-around;
+    background: linear-gradient(to right, #ffe0e0, #fff5e1);
+}
+#popular,#cafe,#local,#dinein,#dess,#ind,#mex,#tea{
+    position: relative;
+    margin-left: 50px;
+    font-style: oblique;
+    font-weight: 900;
+    display: flex;
+    background-position: center;
+    align-items:center;
+    transition: all 0.7s ease-in-out;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    width:200px; height: 200px;
+    border-radius: 10px;
+    z-index: 3;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
+}
+#popular{
+    background-image: url("pizzo.jpg");
+    background-size: cover;
+}
+#cafe{
+    background-image: url("3-shakes.jpg");
+    background-size: cover;
+}
+#local{
+    background-image: url("local.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#dinein{
+    background-image: url(chine.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#dess{
+    background-image: url(dessert.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#ind{
+    background-image: url(authentic.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#mex{
+    background-image: url(coffeefy-workafe-Y0zbn9lPCEU-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#tea{
+    background-image: url(chai.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#popular::before,#cafe::before,#local::before,#dinein::before,#ind::before,#dess::before,#mex::before,#tea::before{
+    
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#popular:hover,#cafe:hover,#local:hover,#dinein:hover,#ind:hover,#mex:hover,#dess:hover,#tea:hover{
+    transform: scale(1.1);
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+footer{
+    z-index: 3;
+    height: 350px;
+    background: linear-gradient(to left,rgba(87, 86, 86, 0.6),rgba(255, 251, 251, 0.3))
+}
+#flag{
+    margin-top: 25px;
+}
+
+#country{
+    margin-bottom: 20px;
+    font-size:medium;
+}
+
+#align{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 100px;
+}
+
+#foot{
+    font-variant: small-caps;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bolder;
+    flex-direction: row;
+    gap: 80%;
+    
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 30px;
+}
+#about h2{
+    font-size: 20px;
+    font-variant: small-caps;
+}
+#about p{
+    margin-left: 35px;
+    padding-top: 30px;
+}
+#learn p{
+    margin-top: 15px; margin-left: 40px;
+}
+
+#learn h2{
+    font-variant: small-caps;
+    font-size: 20px;
+}
+#social h2{
+    font-variant: small-caps;
+    margin-left: 25px;
+    font-size: 20px;
+}
+#social_apps{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#social_apps a{
+    text-decoration: none;
+    color: black;
+}
+@media (max-width: 768px) {
+    #places {
+      height: auto; /* allow height to adjust */
+      padding: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      justify-content: center;
+    }
+  
+    #popular, #cafe, #local, #dinein, #dess, #ind, #mex, #tea {
+      margin-left: 0;
+      width: 100%;
+      max-width: 220px;
+      height: 180px;
+      font-size: 1rem;
+      margin: auto;
+    }
+  
+    #popular:hover, #cafe:hover, #local:hover, #dinein:hover, 
+    #ind:hover, #mex:hover, #dess:hover, #tea:hover {
+      transform: scale(1.05);
+    }
+  
+    #align {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    #foot {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  
+    #about p,
+    #learn p {
+      margin-left: 0;
+      padding: 10px 20px 0 20px;
+      text-align: center;
+    }
+  
+    #learn p {
+      margin-top: 10px;
+    }
+  
+    #social h2 {
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    #social_apps {
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 30px;
+    }
+  }
+  @media (max-width: 768px) {
+    header {
+      height: auto;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    header::before {
+      height: 100%;
+    }
+  
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      gap: 10px;
+    }
+  
+    .nav #app,
+    .nav #cart,
+    .nav #profile {
+      margin-left: 0;
+      padding-right: 0;
+      font-size: 18px;}
+  
+    #applogo,
+    #cartlogo,
+    #userlogo {
+      padding-left: 0;
+      margin-top: 10px;}
+  
+    .zomato {
+      position: static;
+      min-height: auto;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 24px;}
+  
+    .zomato h1 {
+      font-size: 60px;
+    }
+  
+    #search-box {
+      flex-direction: column;
+      margin: 20px auto 0 auto;
+      padding: 0;
+      width: 90%;
+      height: auto;
+    }
+  
+    #search-box #s,
+    #search-box #s input {
+      width: 100%;
+      height: 50px;
+      font-size: 18px;
+    }
+  
+    #search-icon {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .zomato h1 {
+      font-size: 40px;
+    }
+  
+    .nav a {
+      font-size: 16px;
+    }
+  
+    #search-box #s input {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    header {
+      height: auto;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    header::before {
+      height: 100%;
+    }
+  
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      gap: 10px;
+    }
+  
+    .nav #app,
+    .nav #cart,
+    .nav #profile {
+      margin-left: 0;
+      padding-right: 0;
+      font-size: 18px;
+    }
+  
+    #applogo,
+    #cartlogo,
+    #userlogo {
+      padding-left: 0;
+      margin-top: 10px;}
+  
+    .zomato {
+      position: static;
+      min-height: auto;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 24px;}
+  
+    .zomato h1 {
+      font-size: 60px;}
+  
+    #search-box {
+      flex-direction: column;
+      margin: 20px auto 0 auto;
+      padding: 0;
+      width: 90%;
+      height: auto;}
+  
+    #search-box #s,
+    #search-box #s input {
+      width: 100%;
+      height: 50px;
+      font-size: 18px;}
+  
+    #search-icon {
+      margin-left: 0;
+      margin-top: 10px;}
+  }
+  
+  @media (max-width: 768px) {
+    #delivery {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 10px;
+      text-align: center;
+    }
+  
+    #left h2 {
+      font-size: 2rem;
+    }
+  
+    #left p {
+      font-size: 1rem;
+    }
+  
+    #right {
+      height: 200px;
+      width: 100%;
+    }
+  
+    #bg {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    #online, #dine, #clubs {
+      width: 90%;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #left h2 {
+      font-size: 1.6rem;
+    }
+  
+    #left p {
+      font-size: 0.9rem;
+    }
+  
+    #delivery:hover {
+      transform: none;
+    }
+  
+    #online, #dine, #clubs {
+      width: 100%;
+      height: 220px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  #app, #cart, #profile {
+    font-size: 16px;
+  }
+
+  #applogo, #cartlogo, #userlogo {
+    height: 24px;
+    width: 24px;
+  }
+}
+@media (max-width: 600px) {
+    footer {
+      padding: 30px 10px;
+      min-height: auto;
+    }
+  
+    #align {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    #foot {
+      font-size: 16px;
+      gap: 20px;
+    }
+  
+    #about p, #learn p {
+      margin-left: 0;
+      padding: 0 10px;
+      text-align: center;
+    }
+  }
+  
