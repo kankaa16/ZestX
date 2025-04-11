@@ -1,3 +1,4 @@
 # ZestX
-CS102 project - WebDev
-(We recommend starting with Login page at login.html)
+1st WebDev Project 
+Our website allows user to make their account and directs to our home page that contains various food delicacies
+
